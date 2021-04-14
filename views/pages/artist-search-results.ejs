@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search results</title>
+</head>
+
+<body>
+    <h1>Results:</h1>
+
+
+    <% data.forEach(elm=> { %>
+
+        <h3>
+            <%= elm.name %>
+        </h3>
+        <img src=<%=imgAccessLink %> alt="">
+
+
+        <a href=<%=elm.external_urls.spotify %> >Link to spotify</a>
+
+        <p>
+            <%= elm.id %>
+        </p>
+
+
+        <a href=<%=`/albums/${elm.id}`%>>
+            <h3>Link to albums over API</h3>
+        </a>
+
+        <p>
+            <%= elm.images[1] %>
+        </p>
+        <h2>
+            <%= JSON.stringify(elm.images[1]) %>
+        </h2>
+        <h1 style="color:violet">
+            <%= elm.images[1] %>
+        </h1>
+
+        <p style="color:red;">
+            <%= elm.images %>
+        </p>
+
+        <h3 style="color:red;">
+            <%= Object.keys(elm.images) %>
+        </h3>
+   
+
+
+        <p style="color:rgb(0, 255, 55);">
+            <%= imgAccessLink %>
+        </p>
+
+        <% let arrayOfImages=[] %>
+            <% elm.images.forEach(elm=> { %>
+                <% arrayOfImages.push(elm.url) %>
+                    <p>
+                        <%= elm.url %>
+                    </p>
+                    <% }) %>
+
+                        <p style="color:orange;">
+                            <%= arrayOfImages[1] %>
+                        </p>
+
+                        <img src=<%=arrayOfImages[1] %> alt="">
+
+                        <% }) %>
+
+</body>
+
+</html>
