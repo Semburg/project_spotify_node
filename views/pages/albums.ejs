@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
     <title>Albums</title>
 </head>
+
 <body>
-    <h1>Albums:</h1>
+    <!-- <h1>Albums:</h1> -->
 
-    <% data.forEach(elm => { %>
+    <section class="wrapper">
 
-        <a href=></a>
-        <h2><%= elm.id %></h2>
+        <section class="wrapper_grid">
 
-        <p><%= elm.name %> </p>
-        <p><%= elm.images[1].url %> </p>
-        <img src=<%= elm.images[1].url %> alt="">
+            <% data.forEach(elm=> { %>
 
-        <a href=<%=`/album/${elm.id}`%>>
-            <h3>Details</h3>
-        </a>
+                <div class="card">
 
-    <% }) %>
+                    <a href=<%=`/album/${elm.id}`%>>
+
+                        <h3>
+                            <%= elm.name %>
+                        </h3>
+                        <img src=<%=elm.images[1].url %> alt="">
+
+
+                    </a>
+
+
+                </div>
+                <% }) %>
+
+        </section>
+    </section>
 
 </body>
+
 </html>

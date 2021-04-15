@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+
+/* ************************** */
+/* ****  General and Front  ****** */
+/* ************************** */
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Orelega One', cursive;
+
+    /* display: flex;
+    align-items: center; */
+}
+
+.wrapper_main{
+    padding-left: 10px;
+    height: 100vh;
+    background:url("img/bg_front.jpg") center/cover no-repeat;
+    overflow-y: hidden;
+}
+
+.wrapper_head{
+    text-align: center;
+    width: 30vw;
+    height: 20vh;
+    margin-left: 5vw;
+
+    /* border: 1px solid #000; */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 200px;
+    background:url("img/bg_wrap2.jpeg") repeat;
+}
+
+#searchName, .btn{
+    border: none;
+    outline: none;
+    height:25px;
+    margin: 0;
+}
+
+#searchName{
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 3px;
+    background-color: gold;
+    text-align: center;
+    border: 1px dotted rgb(230, 227, 227);
+    font-family: 'Orelega One', cursive;
+
+}
+
+#searchName::placeholder{
+    color: grey;
+    opacity: .4;
+    font-family: 'Orelega One', cursive;
+
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    border-top-right-radius: 15px ;
+    border-bottom-right-radius: 3px ;
+    font-family: 'Orelega One', cursive;
+    transition: all 0.8s;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color:grey;
+}
+
+/* ************************** */
+/* ****  Cards pages with grid  ****** */
+/* ************************** */
+
+img{
+    width: 320px;
+    height: 320px;
+}
+
+.wrapper{
+    background:url("img/bg_wrap2.jpeg") repeat;
+    margin: 0;
+    padding: 0;
+    /* margin-top: -15px; */
+}
+
+.wrapper_grid{
+    margin: 0;
+    padding: 0;
+    width:90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 0 auto;
+    padding-top: 45px;
+
+}
+
+.card{
+    display: inline-block;
+    /* border: 1px solid black; */
+    text-align: center;
+    background-color: #fff;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid white;
+    color: #999;
+    /* width: 100px; */
+    transition: all 0.6s;
+    box-sizing: border-box;
+}
+
+a:hover{
+    background-color: gold;
+    border: 1px solid gold;
+
+    box-sizing: border-box;
+
+}
+
+a h3{
+    /* width: 30%; */
+    /* border: 1px solid gold; */
+
+}
+
+
+.item_music{
+    padding-left: 50px;
+}
+
+
